@@ -3,14 +3,20 @@
 body {
   margin: 0;
   padding: 0;
-  color: rgb(42, 48, 179);
+  color: rgb(0, 0, 0);
   font-family: 'open sans', sans-serif;
 }
 
+main {
+  margin: 0;
+  padding: 0;
+}
+
 .header-wrapper {
-  height: 100px;
+  height: 50px;
   width: 100%;
-  background:#4ca59b;
+  background-color: rgb(0, 0, 0);
+  padding: 0;
   background-size: 50% 50%;
   display: flex;
   flex-direction: column;
@@ -21,16 +27,18 @@ body {
 
 h1 {
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
+  text-decoration: wavy;
 }
 
 h2 {
   text-transform: uppercase;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
+  text-decoration: dotted;
 }
 
 .wrapper {
-  height: 100vh;
+  height: 70vh;
   width: 100vw;
   background: linear-gradient(-45deg, #411474, #3d7fa2, #4ca59b, #1fa194);
   background-size: 400%, 400%;
@@ -48,7 +56,8 @@ h2 {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: wavy;
+  letter-spacing: 2px;
   color: #fff;
   font-size: 24px;
   padding: 1rem 4rem;
@@ -86,11 +95,11 @@ a:hover {
 }
 
 .checkbox {
-  height: 100px;
-  width: 100px;
+  height: 50px;
+  width: 50px;
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 2px;
+  right: 8px;
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -99,8 +108,8 @@ a:hover {
 }
 
 .checkbox .trace {
-  width: 50px;
-  height: 2px;
+  width: 40px;
+  height: 1px;
   background-color: #fff;
   position: fixed;
   border-radius: 4px;
@@ -108,31 +117,36 @@ a:hover {
 }
 
 .checkbox .trace:nth-child(1) {
-  top: 26px;
+  top: 12px;
+  right: 15px;
   transform: rotate(0); 
 }
 
 .checkbox .trace:nth-child(2) {
-  top: 46px;
+  top: 22px;
+  right: 15px;
   transform: rotate(0); 
 }
 
 .checkbox .trace:nth-child(3) {
-  top: 66px;
+  top: 32px;
+  right: 15px;
   transform: rotate(0); 
 }
 
 #toggle {
   display: none;
+  top: 10px;
+  right: 12px;
 }
 
 .menu {
   position: absolute;
-  top: 28px;
-  right: 30px;
+  top: 12px;
+  right: 25px;
   background: transparent;
-  height: 40px;
-  width: 40px;
+  height: 28px;
+  width: 28px;
   border-radius: 50%;
   box-shadow: 0px 0px 0px 0px #1fa194;
   z-index: -2;
@@ -141,10 +155,10 @@ a:hover {
 
 .menu-items {
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 12px;
+  right: 25px;
   width: 100%;
-  height: 100vh;
+  height: 75vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -172,12 +186,12 @@ a:hover {
 #toggle:checked + .checkbox .trace:nth-child(1) {
   transform: rotate(45deg);
   background-color: rgb(0, 0, 0);
-  top: 47px;
+  top: 25px;
 }
 
 #toggle:checked + .checkbox .trace:nth-child(2) {
   transform: translateX(-100px);
-  width: 30px;
+  width: 200px;
   visibility: hidden;
   opacity: 0;
 }
@@ -185,7 +199,7 @@ a:hover {
 #toggle:checked + .checkbox .trace:nth-child(3) {
   transform: rotate(-45deg);
   background-color: rgb(0, 0, 0);
-  top: 48px;
+  top: 26px;
 }
 
 #toggle:checked ~ .main {
@@ -196,7 +210,11 @@ a:hover {
 }
 
 #toggle:checked + .checkbox {
-  background-color: rgb(42, 48, 179);
+  background-color: rgb(245, 245, 250);
+  top: 4px;
+  right: 12px;
+  height: 45px;
+  width: 45px;
 }
 
 #toggle:checked ~ .menu {
@@ -221,6 +239,93 @@ a:hover {
   margin: 3rem 0;
 }
 
+.card {
+  height: 250px;
+  background-size: 400%, 400%;
+  background-color: darkgray;
+}
+
+.card-img-link {
+  border-radius: 50%;
+  width: 210px;
+  height: 210px;
+  margin-left: 7rem;
+  align-items: center;
+  border: 1px solid #FFF;
+  background: #FFF;
+}
+
+.card-img-insta {
+  border-radius: 100%;
+  margin-top: 0.6rem;
+  margin-left: 7rem;
+  width: 190px;
+  height: 190px;
+  align-items: center;
+  border: 1px solid #FFF;
+  background: #FFF;
+}
+
+.card-title{
+  text-transform: uppercase;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.card-img-git {
+  border-radius: 100%;
+  width: 205px;
+  height: 205px;
+  margin-left: 7rem;
+  align-items: center;
+  justify-items: center;
+  border: 1px solid #FFF;
+  background: #FFF;
+}
+
+.card-text-link {
+  margin-top: 1rem;
+  padding: 10px;
+  text-align: justify;
+  text-indent: 40px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #411474, #3d7fa2, #4ca59b, #1fa194);
+  background-size: 400% 400%;
+}
+
+.card-small {
+  margin-top: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: #FFF;
+  background-size: 400% 400%;
+}
+
+
+.card-text-insta {
+  margin-top: 1.7rem;
+  padding: 10px;
+  text-align: justify;
+  text-indent: 40px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #411474, #3d7fa2, #4ca59b, #1fa194);
+  background-size: 400% 400%;
+}
+
+.card-text-git {
+  margin-top: 1.3rem;
+  padding: 10px;
+  text-align: justify;
+  text-indent: 40px;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(-45deg, #411474, #3d7fa2, #4ca59b, #1fa194);
+  background-size: 400% 400%;
+}
+
 .card1-container1 {
   display: flex;
   align-items: center;
@@ -231,8 +336,8 @@ a:hover {
 .card1 {
   height: 300px;
   width: 300px;
-  margin: 3rem 0 0;
-  background-image: url('./planodefundo.jpg');
+  margin: 0;
+  background-image: url('./assets/filipe.JPG');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -257,9 +362,9 @@ a:hover {
 .card1-wrapper1::before {
   content: '';
   position: absolute;
-  height: 50px;
+  height: 160px;
   width: 50px;
-  display:block;
+  display: block;
   border: 1px solid #FFF;
   opacity: 0;
   transition: 0.3s;
@@ -288,171 +393,19 @@ a:hover {
 
 .card1:hover > .card1-wrapper1::before {
   opacity: 1;
+  position: fixed;
   width: 160px;
   height: 50px;
 }
 
-.container2 {
-  width: 100%;
-  height: auto;
+.social-media {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem 0;
-}
-
-.card2-container2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 90%;
-}
-
-.card2 {
-  height: 300px;
-  width: 300px;
-  margin: 3rem 0 0;
-  background-image: url('./planodefundo.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  filter: grayscale(0.5);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.card2-text2 {
-  width: 40%;
-  font-family: sans-serif;
-  letter-spacing: 1px;
-  color: rgb(109, 109, 109);
-  text-align:justify
-}
-
-.card2-wrapper2::before {
-  content: '';
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  display: block;
-  border: 1px solid #FFF;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.card2-wrapper2 h2 {
-  font-size: 40px;
+  flex-direction: row;
+  background-color: #c4f9f6;
   text-transform: uppercase;
-  letter-spacing: 4px;
-  margin: 0;
-  transition: 0.3s;
 }
 
-.card2-wrapper2 p {
-  font-size: 0;
-  visibility: hidden;
-  opacity: 0;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.3s;
-}
-
-.card2:hover {
-  filter: unset;
-}
-
-.card2:hover > .card2-wrapper2::before {
-  opacity: 1;
-  width: 200px;
-  height: 50px;
-}
-
-.container3 {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 3rem 0;
-}
-
-.card3-container3 {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 90%;
-}
-
-.card3 {
-  height: 300px;
-  width: 300px;
-  margin: 3rem 0 0;
-  background-image: url('./planodefundo.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  filter: grayscale(0.5);
-  color: #fff;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.card3-text3 {
-  width: 40%;
-  font-family: sans-serif;
-  letter-spacing: 1px;
-  color: rgb(109, 109, 109);
-  text-align:justify
-}
-
-.card3-wrapper3::before {
-  content: '';
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  display: block;
-  border: 1px solid #FFF;
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.card3-wrapper3 h2 {
-  font-size: 40px;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin: 0;
-  transition: 0.3s;
-}
-
-.card3-wrapper3 p {
-  font-size: 0;
-  visibility: hidden;
-  opacity: 0;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.3s;
-}
-
-.card3:hover {
-  filter: unset;
-}
-
-.card3:hover > .card3-wrapper3::before {
-  opacity: 1;
-  width: 250px;
-  height: 50px;
-}
+/* RODAPÉ */
 
 .footer {
   height: 100px;
@@ -460,7 +413,14 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #4ca59b;
+  text-decoration: #fff;
+  background-color: rgb(0, 0, 0);
+}
+
+.footer h3 {
+  text-decoration-color: rgb(250, 250, 255);
+  color: aliceblue;
+  text-decoration: wavy;
 }
 
 /* RESPONSIVO */
@@ -469,6 +429,7 @@ a:hover {
   .social-media {
     display: flex;
     flex-direction: column;
+    background-color: #a2b0af;
   }
 
   .container1{
@@ -483,7 +444,10 @@ a:hover {
   .container1 .card1-container1:nth-child(3) {
     flex-direction: column-reverse;
   }
-
+  .card {
+    height: 100px;
+    margin-top: 2rem;
+  }
   .card1 {
     height: 250px;
     margin-top: 2rem;
@@ -499,63 +463,4 @@ a:hover {
     height: 190px;
     width: 190px;
   }
-
-  .container2{
-    margin-top: 0;
-  }
-
-  .card2-container2 {
-    flex-direction:column;
-  }
-
-  .container2 .card2-container2:nth-child(1),
-  .container2 .card1-container2:nth-child(3) {
-    flex-direction: column-reverse;
-  }
-
-  .card2 {
-    height: 250px;
-    margin-top: 2rem;
-  }
-
-  .card2-text2 {
-    height: 250px;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .card2:hover > .card2-wrapper2::before {
-    height: 190px;
-    width: 190px;
-  }
-
-  .container3{
-    margin-top: 0;
-  }
-
-  .card1-container3 {
-    flex-direction:column;
-  }
-
-  .container3 .card1-container3:nth-child(1),
-  .container3 .card1-container3:nth-child(3) {
-    flex-direction: column-reverse;
-  }
-
-  .card3 {
-    height: 250px;
-    margin-top: 2rem;
-  }
-
-  .card3-text3 {
-    height: 250px;
-    margin-top: 2rem;
-    text-align: center;
-  }
-
-  .card3:hover > .card3-wrapper3::before {
-    height: 190px;
-    width: 190px;
-  }
-
 }
